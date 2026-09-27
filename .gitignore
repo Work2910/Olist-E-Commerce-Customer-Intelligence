@@ -1,0 +1,15 @@
+# Data (too large for GitHub)
+Data/Raw/
+Data/Processed/
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Python
+__pycache__/
+
+# Virtual environment and secrets
+venv/
+.venv/
+.env

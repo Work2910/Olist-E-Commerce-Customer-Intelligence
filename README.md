@@ -2,7 +2,7 @@
 
 End-to-end customer intelligence analysis of the Olist Brazilian e-commerce dataset using Python, SQL, RFM segmentation and Power BI.
 
-**Status:** In progress — Day 1 (data understanding) complete.
+**Status:** In progress — data understanding and cleaning complete.
 
 ## Business Questions
 - How are revenue and orders changing over time?
@@ -13,13 +13,18 @@ End-to-end customer intelligence analysis of the Olist Brazilian e-commerce data
 ## Dataset
 [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — 9 relational tables covering orders, customers, products, sellers, payments, reviews and geolocation.
 
-Raw data is not included in this repository. To reproduce, download the CSVs from Kaggle into `Data/Raw/`.
+Data files are not included in this repository.
+
+## How to Reproduce
+1. Download the CSVs from Kaggle into `Data/Raw/`.
+2. Run `Notebooks/1_Data_Understanding.ipynb` to review the data.
+3. Run `Notebooks/2_Data Cleaning & Preprocessing.ipynb` to create the cleaned tables in `Data/Processed/`.
 
 ## Progress
-- [x] Data understanding
-- [ ] Data cleaning
-- [ ] SQL analysis
-- [ ] Exploratory data analysis
-- [ ] RFM segmentation
-- [ ] Power BI dashboard
-- [ ] Insights and recommendations
+- ✅ Data understanding
+- ✅ Data cleaning
+- ⬜ SQL analysis
+- ⬜ Exploratory data analysis
+- ⬜ RFM segmentation
+- ⬜ Power BI dashboard
+- ⬜ Insights and recommendations

@@ -34,14 +34,14 @@ for table in tables:
     print(f"{table}: {len(df):,} rows loaded")
 
 
-# row counts in MySQL should match the CSVs
+# row counts in MySQL
 print("\nrow counts in MySQL:")
 for table in tables:
     count = pd.read_sql(f"SELECT COUNT(*) AS n FROM {table}", engine)["n"][0]
     print(f"{table}: {count:,}")
 
 
-# headline numbers in pandas vs MySQL - these two lines should match
+# headline numbers in pandas vs MySQL
 orders = pd.read_csv(PROCESSED_PATH + "orders_clean.csv")
 items = pd.read_csv(PROCESSED_PATH + "order_items_clean.csv")
 

@@ -1,9 +1,8 @@
--- Olist E-Commerce Customer Intelligence
+
 -- Day 3 - creates one table per cleaned CSV from Data/Processed/
 
 USE olist_ecommerce;
 
--- drop in reverse order so foreign keys don't block it (safe to rerun)
 DROP TABLE IF EXISTS reviews_by_order;
 DROP TABLE IF EXISTS payments_by_order;
 DROP TABLE IF EXISTS payments;

@@ -1,7 +1,3 @@
--- Olist E-Commerce Customer Intelligence
--- Day 3 - sales analysis
--- revenue = price + freight per item (item_revenue, from Day 2)
--- only orders with in_analysis_scope = TRUE are counted
 
 USE olist_ecommerce;
 

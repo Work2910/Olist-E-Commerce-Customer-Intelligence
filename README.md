@@ -2,7 +2,7 @@
 
 End-to-end customer intelligence analysis of the Olist Brazilian e-commerce dataset using Python, SQL, RFM segmentation and Power BI.
 
-**Status:** In progress — data understanding, cleaning, SQL analysis and EDA complete.
+**Status:** In progress — data understanding, cleaning, SQL analysis, EDA and RFM segmentation complete.
 
 ## Business Questions
 - How are revenue and orders changing over time?
@@ -15,6 +15,7 @@ End-to-end customer intelligence analysis of the Olist Brazilian e-commerce data
 - Only 3.0% of customers placed more than one order, so retention is the biggest growth opportunity.
 - SP, RJ and MG generate 62.5% of revenue; the top 10 categories generate 62.4%.
 - Late orders average 2.27 stars versus 4.29 for on-time orders, and 52.5% of late orders get a 1-star review.
+- Two one-time buyer segments, High-value new and At risk, are 30.2% of customers but 55.7% of revenue.
 
 ## Dataset
 [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — 9 relational tables covering orders, customers, products, sellers, payments, reviews and geolocation.
@@ -34,12 +35,13 @@ Python (pandas, matplotlib), MySQL, SQLAlchemy, Power BI
    - `4_load_to_MYSQL.py` (loads the cleaned CSVs and checks totals against pandas)
    - `3_Sales_Analysis.sql`
 5. Run `Notebooks/3_EDA.ipynb` for the exploratory analysis.
+6. Run `Notebooks/4_RFM.ipynb` for customer segmentation. This also creates `rfm_customers.csv` in `Data/Processed/`.
 
 ## Progress
 - ✅ Data understanding
 - ✅ Data cleaning
 - ✅ SQL analysis
 - ✅ Exploratory data analysis
-- ⬜ RFM segmentation
+- ✅ RFM segmentation
 - ⬜ Power BI dashboard
 - ⬜ Insights and recommendations

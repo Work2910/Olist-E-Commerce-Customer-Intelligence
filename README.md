@@ -2,7 +2,7 @@
 
 End-to-end customer intelligence analysis of the Olist Brazilian e-commerce dataset using Python, SQL, RFM segmentation and Power BI.
 
-**Status:** In progress — data understanding, cleaning, SQL analysis, EDA and RFM segmentation complete.
+**Status:** In progress — data understanding, cleaning, SQL analysis, EDA and RFM segmentation complete. Power BI dashboard in progress.
 
 ## Business Questions
 - How are revenue and orders changing over time?
@@ -43,5 +43,5 @@ Python (pandas, matplotlib), MySQL, SQLAlchemy, Power BI
 - ✅ SQL analysis
 - ✅ Exploratory data analysis
 - ✅ RFM segmentation
-- ⬜ Power BI dashboard
+- ⏳ Power BI dashboard
 - ⬜ Insights and recommendations

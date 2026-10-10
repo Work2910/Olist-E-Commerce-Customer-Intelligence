@@ -2,7 +2,7 @@
 
 End-to-end customer intelligence analysis of the Olist Brazilian e-commerce dataset using Python, SQL, RFM segmentation and Power BI.
 
-**Status:** In progress — data understanding, cleaning, SQL analysis, EDA and RFM segmentation complete. Power BI dashboard in progress.
+**Status:** In progress — data understanding, cleaning, SQL analysis, EDA and RFM segmentation complete. Power BI data model and measures complete; dashboard pages in progress.
 
 ## Business Questions
 - How are revenue and orders changing over time?
@@ -23,7 +23,12 @@ End-to-end customer intelligence analysis of the Olist Brazilian e-commerce data
 Data files are not included in this repository.
 
 ## Tools
-Python (pandas, matplotlib), MySQL, SQLAlchemy, Power BI
+Python (pandas, matplotlib), MySQL, SQLAlchemy, Power BI (DAX, Power Query)
+
+## Power BI Model
+- Star schema with `Orders` at the centre, linked to Customers, RFM_Customers and a Date table, with Order_Items, Payments and Reviews at their own grain.
+- 18 DAX measures covering sales, customers, RFM segments, delivery and reviews. All revenue and customer measures use the same `in_analysis_scope` rule as the Python and SQL analysis.
+- Core measures validated against Python and SQL: revenue 15,418,394.83 BRL, 96,470 orders, 93,350 customers.
 
 ## How to Reproduce
 1. Download the CSVs from Kaggle into `Data/Raw/`.
@@ -36,6 +41,7 @@ Python (pandas, matplotlib), MySQL, SQLAlchemy, Power BI
    - `3_Sales_Analysis.sql`
 5. Run `Notebooks/3_EDA.ipynb` for the exploratory analysis.
 6. Run `Notebooks/4_RFM.ipynb` for customer segmentation. This also creates `rfm_customers.csv` in `Data/Processed/`.
+7. Open the Power BI file in Power BI Desktop and click **Refresh** to load the processed data.
 
 ## Progress
 - ✅ Data understanding
@@ -43,5 +49,5 @@ Python (pandas, matplotlib), MySQL, SQLAlchemy, Power BI
 - ✅ SQL analysis
 - ✅ Exploratory data analysis
 - ✅ RFM segmentation
-- ⏳ Power BI dashboard
+- ⏳ Power BI dashboard (data model and measures done, pages in progress)
 - ⬜ Insights and recommendations

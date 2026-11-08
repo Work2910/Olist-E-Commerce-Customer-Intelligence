@@ -43,42 +43,42 @@ Data files are not included in this repository.
 Python (pandas, matplotlib, scikit-learn), MySQL, SQLAlchemy, Power BI (DAX, Power Query)
 
 ## Power BI Dashboard
-- 5 pages covering sales, customers, RFM segments, delivery and reviews.
+- 5 pages: Executive Overview, Customers & RFM Segments, Customer Experience, Sales Performance and Product Performance.
 - Star schema with `Orders` at the centre, linked to Customers, RFM_Customers and a Date table, with Order_Items, Payments and Reviews at their own grain.
 - 25 DAX measures. All revenue and customer measures use the same `in_analysis_scope` rule as the Python and SQL analysis.
 - Core measures validated against Python and SQL: revenue 15,418,394.83 BRL, 96,470 orders, 93,350 customers.
 
 ## Dashboard Preview
 
-### Page 1 — Sales Overview
+### Page 1 — Executive Overview
 
-![Sales Overview](Images/Page_1_Sales_Overview.png)
+![Executive Overview](Images/Page_1_Executive_Overview.png)
 
-Olist brought in **15.42M BRL** from **96,470 delivered orders**. Orders grew fast through 2017, from 750 in Jan 2017 to a peak of **7,288 in Nov 2017** (Black Friday), then levelled off at around 6,000–7,000 a month in 2018. Sales are concentrated: **SP, RJ and MG** bring in 62.5% of revenue, and the **top 10 categories** bring in 62.4%.
+Olist brought in **15.42M BRL** from **96,470 delivered orders** and **93,350 customers**, with an average order value of **159.83 BRL**. Monthly revenue climbed through 2017, peaked in **Nov 2017** (Black Friday) and then held steady through 2018. **health_beauty** (1.41M), **watches_gifts** (1.26M) and **bed_bath_table** (1.23M) are the top categories, and **SP alone brings in 5.77M BRL**, followed by RJ (2.06M) and MG (1.82M).
 
-### Page 2 — Customers
+### Page 2 — Customers & RFM Segments
 
-![Customers](Images/Page_2_Customers.png)
+![Customers & RFM Segments](Images/Page_2_Customers_RFM.png)
 
-Olist served **93,350 customers**, but only **3.0%** of them ever placed a second order. Almost all revenue comes from first-time buyers, which makes getting customers to come back the biggest growth opportunity in the data.
+Only **2,801 of 93,350 customers (3.00%)** bought more than once, and the average customer spent **165.17 BRL**. Customers are split into 7 RFM segments. Two one-time buyer segments stand out: **High-value new** (15.4% of customers, 28.2% of revenue) are recent big spenders and the best target for a second purchase, while **At risk** (14.8% of customers, 27.5% of revenue) spent just as much but have not bought in over a year. **Champions** and **Loyal** customers spend the most per person but make up only 3% of customers.
 
-### Page 3 — RFM Segments
+### Page 3 — Customer Experience
 
-![RFM Segments](Images/Page_3_RFM_Segments.png)
+![Customer Experience](Images/Page_3_Customer_Experience.png)
 
-Customers are grouped into 7 segments by how recently they bought, whether they bought more than once, and how much they spent. Two one-time buyer segments stand out: **High-value new** (14,411 customers, 28.2% of revenue) are recent big spenders and the best target for a second purchase, while **At risk** (13,773 customers, 27.5% of revenue) spent just as much but have not bought in over a year. Together they are 30.2% of customers but 55.7% of revenue.
+Orders take **12.1 days** on average, **6.77%** arrive late, and **9.76%** of reviews are 1-star. Review scores stay above 4 for deliveries up to 21 days (4.41, 4.29, 4.10), drop to 3.49 at 22–30 days, and fall to about **2.2 for anything over 30 days**. Late orders score **2.27** on average against **4.29** for on-time orders, a gap of 2 stars.
 
-### Page 4 — Delivery Performance
+### Page 4 — Sales Performance
 
-![Delivery Performance](Images/Page_4_Delivery.png)
+![Sales Performance](Images/Page_4_Sales_Performance.png)
 
-**6.77%** of orders arrived late, and orders took **12.1 days** on average. Late delivery is not spread evenly: the north-east is worst, with **AL at 21.4%**, MA at 17.4% and SE at 15.2%, while SP is only 4.49%. **RJ** is the second-largest market but has a 12.11% late rate, almost three times SP's, so it affects the most customers.
+Monthly orders peaked in **Nov 2017**, while the average order value stayed steady at around **160 BRL** the whole time, so growth came from more orders, not bigger ones. **Credit card** makes up **78.3%** of payment value, followed by boleto (17.9%). The state table shows that delivery problems are uneven: **SP** has a 4.49% late rate, while **RJ**, the second-largest market, is at **12.11%**, and **AL** is the worst at **21.41%**.
 
-### Page 5 — Reviews
+### Page 5 — Product Performance
 
-![Reviews](Images/Page_5_Reviews.png)
+![Product Performance](Images/Page_5_Product_Performance.png)
 
-The average review score is **4.16**, but late orders average only **2.27 stars** against 4.29 for on-time orders, and **52.5%** of late orders get a 1-star review. Scores stay above 4 for deliveries up to 21 days, then drop sharply. Bulky categories such as furniture_decor and bed_bath_table have the highest freight share and the lowest scores among the top 10 categories.
+**32,214 products** were sold across **110,189 items**, at an average item price of **119.98 BRL**, and freight makes up **14.26%** of revenue. Bulky categories cost the most to ship: **furniture_decor (19.1%)** and **bed_bath_table (16.5%)** have among the highest freight shares in the top 10, and they also have the **lowest review scores (4.06 and 4.00)**. watches_gifts has the lowest freight share at 7.8%.
 
 ## Insights and Recommendations
 See [Insights_and_Recommendations.md](Insights_and_Recommendations.md) for the full findings and business recommendations.
